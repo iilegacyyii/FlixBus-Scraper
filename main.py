@@ -74,7 +74,7 @@ if __name__ == "__main__":
             countries = [args.c]
     else:
         with open(args.file, "r") as f:
-            countries = f.read().split()
+            countries = f.read().split("\n")
             # Remove any trailing newlines, think this is important as this could make the city list grabbing act out.
             if '\n' in countries:
                 countries.remove('\n')
